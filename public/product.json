@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "price": "$234",
+        "name": "PL_Lotion",
+        "img": "https://sante.qodeinteractive.com/wp-content/uploads/2020/09/h2-product1-list-img.png"
+    },
+    {
+        "id": 2,
+        "price": "$234",
+        "name": "PL_Serum",
+        "img": "https://sante.qodeinteractive.com/wp-content/uploads/2020/09/h2-product2-list-img.png"
+    },
+    {
+        "id": 3,
+        "price": "$234",
+        "name": "Body_Milk",
+        "img": "https://sante.qodeinteractive.com/wp-content/uploads/2020/09/h2-product3-list-img.png"
+    },
+    {
+        "id": 4,
+        "price": "$234",
+        "name": "Eye_Roll",
+        "img": "https://sante.qodeinteractive.com/wp-content/uploads/2020/09/h2-product4-list-img.png"
+    },
+    {
+        "id": 5,
+        "price": "$234",
+        "name": "PL_Lotion",
+        "img": "https://sante.qodeinteractive.com/wp-content/uploads/2020/09/h2-product5-list-img.png"
+    },
+    {
+        "id": 6,
+        "price": "$234",
+        "name": "BB_Cream",
+        "img": "https://sante.qodeinteractive.com/wp-content/uploads/2020/09/h2-produc6-list-img.png"
+    },
+    {
+        "id": 7,
+        "price": "$234",
+        "name": "Hand_spa",
+        "img": "https://sante.qodeinteractive.com/wp-content/uploads/2020/09/h2-product6-list-img.png"
+    },
+    {
+        "id": 8,
+        "price": "$234",
+        "name": "Oil_Serum",
+        "img": "https://sante.qodeinteractive.com/wp-content/uploads/2020/09/h2-product7-list-img.png"
+    },
+    {
+        "id": 9,
+        "price": "$234",
+        "name": "PI_Hair",
+        "img": "https://sante.qodeinteractive.com/wp-content/uploads/2020/09/h2-product8-list-img.png"
+    },
+    {
+        "id": 10,
+        "price": "$234",
+        "name": "Hair_Boost",
+        "img": "https://sante.qodeinteractive.com/wp-content/uploads/2020/09/h2-product9-list-img.png"
+    }
+]

@@ -33,22 +33,36 @@ const Navbar = () => {
                     <ul class="menu menu-horizontal p-0">
                         <li>
                             <NavLink className={({ isActive }) =>
-                                isActive ? 'bg-green-500 text-white' : ''
-                            } to='/'>Home</NavLink>
+                                isActive ? 'bg-green-500 text-white font-semibold' : 'font-semibold'
+                            } to='/'>HOME</NavLink>
                         </li>
                         <li className='mx-4'>
                             <NavLink
                                 className={({ isActive }) =>
-                                    isActive ? 'bg-green-500 text-white' : ''
+                                    isActive ? 'bg-green-500 text-white font-semibold' : 'font-semibold'
                                 }
-                                to='/about'>About</NavLink>
+                                to='/about'>ABOUT</NavLink>
+                        </li>
+                        <li >
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? 'bg-green-500 text-white font-semibold' : ' font-semibold'
+                                }
+                                to='/contact'>CONTACT</NavLink>
+                        </li>
+                        <li className='mx-4'>
+                            <NavLink
+                                className={({ isActive }) =>
+                                    isActive ? 'bg-green-500 text-white font-semibold' : 'font-semibold'
+                                }
+                                to='/addProduct'>ADD PRODUCT</NavLink>
                         </li>
                         <li>
                             <NavLink
                                 className={({ isActive }) =>
-                                    isActive ? 'bg-green-500 text-white' : ''
+                                    isActive ? 'bg-green-500 text-white font-semibold' : 'font-semibold'
                                 }
-                                to='/contact'>Contact</NavLink>
+                                to='/manageProduct'>MANAGE PRODUCT</NavLink>
                         </li>
                     </ul>
                 </div>

@@ -18,8 +18,8 @@ const Product = ({ product }) => {
                 <h3 className='font-bold hover:text-primary static'>{product.name}</h3>
 
                 <div onMouseOver={handleMouseOver} onMouseOut={handleMouseOut} >
-                    {isHovering ? <h3 className='font-bold delay-700 text-green-500'>Add to Cart</h3>
-                        : <h3 className='font-bold block delay-1000'>{product.price}</h3>}
+                    {isHovering ? <h3 className='font-bold text-green-500'>Add to Cart</h3>
+                        : <h3 className='font-bold block'>{product.price}</h3>}
                 </div>
             </div>
         </div>

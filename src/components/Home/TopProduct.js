@@ -3,7 +3,7 @@ import React from 'react';
 
 const TopProduct = () => {
     return (
-        <div className='grid grid-cols-2 my-12 relative lg:p-20 lg:gap-x-20'>
+        <div className='grid grid-cols-1 gap-y-12 lg:gap-y-0 lg:grid-cols-2 my-12 relative p-8 gap-x-3 lg:p-20 lg:gap-x-20'>
             <div className='flex items-center relative'>
                 <div>
                     <h1 className='text-5xl font-bold'>2020 Top selling <br />
@@ -11,7 +11,7 @@ const TopProduct = () => {
                     <h3 className='text-xl my-5'>
                         Alienum phaedrum torquatos nec eu, detr periculis ex, <br />  nihil expetendis in mei. Mei an pericula euripidis.
                     </h3>
-                    <button class="btn btn-secondary bg-green-500 border-0 text-white">Button</button>
+                    <button class="btn btn-secondary bg-green-500 border-0 text-white w-40">READ MORE</button>
 
                 </div>
             </div>

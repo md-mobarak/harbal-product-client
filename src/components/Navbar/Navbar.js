@@ -2,7 +2,14 @@ import React from 'react';
 import { AiOutlineUser, AiOutlineShoppingCart } from 'react-icons/ai'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../../images/SUPHERB JPG.jpg'
+import { signOut } from 'firebase/auth';
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 const Navbar = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const logout = () => {
+        signOut(auth);
+    };
     return (
         <div>
             <div class="navbar bg-[#FFFFFF] py-5">
@@ -21,6 +28,12 @@ const Navbar = () => {
                             <li>
                                 <NavLink to='/contact'>Contact</NavLink>
                             </li>
+                            {user && <li>
+                                <NavLink to='/addProduct'>Add Product</NavLink>
+                            </li>}
+                            {user && <li>
+                                <NavLink to='/manageProduct'>Manage Product</NavLink>
+                            </li>}
 
 
                         </ul>
@@ -51,18 +64,18 @@ const Navbar = () => {
                                 to='/contact'>CONTACT</NavLink>
                         </li>
                         <li className='mx-4'>
-                            <NavLink
+                            {user && <NavLink
                                 className={({ isActive }) =>
                                     isActive ? 'bg-green-500 text-white font-semibold' : 'font-semibold'
                                 }
-                                to='/addProduct'>ADD PRODUCT</NavLink>
+                                to='/addProduct'>ADD PRODUCT</NavLink>}
                         </li>
                         <li>
-                            <NavLink
+                            {user && <NavLink
                                 className={({ isActive }) =>
                                     isActive ? 'bg-green-500 text-white font-semibold' : 'font-semibold'
                                 }
-                                to='/manageProduct'>MANAGE PRODUCT</NavLink>
+                                to='/manageProduct'>MANAGE PRODUCT</NavLink>}
                         </li>
                     </ul>
                 </div>
@@ -73,13 +86,17 @@ const Navbar = () => {
                                 isActive ? 'text-green-500' : ''
                             }
                             to='/cart'><AiOutlineShoppingCart size='25px'></AiOutlineShoppingCart></NavLink>
-                        <NavLink
-                            className={({ isActive }) =>
-                                isActive ? 'text-green-500' : ''
-                            }
-                            to='/user'>
-                            <AiOutlineUser className='mx-8' size='25px'></AiOutlineUser>
-                        </NavLink>
+                        {
+                            user ?
+                                <NavLink to='/' className=' mx-3 text-green-500 font-semibold' onClick={logout}>Log Out</NavLink> :
+                                <NavLink
+                                    className={({ isActive }) =>
+                                        isActive ? 'text-green-500' : ''
+                                    }
+                                    to='/login'>
+                                    <AiOutlineUser className='mx-8' size='25px'></AiOutlineUser>
+                                </NavLink>
+                        }
                     </div>
                 </div>
             </div>

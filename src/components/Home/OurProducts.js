@@ -3,8 +3,9 @@ import Product from './Product';
 
 const OurProducts = () => {
     const [products, setProducts] = useState([])
+    const tenProducts = products.slice(0, 10)
     useEffect(() => {
-        fetch("product.json")
+        fetch("https://infinite-refuge-87124.herokuapp.com/product")
             .then(res => res.json())
             .then(data => {
                 setProducts(data)
@@ -26,7 +27,7 @@ const OurProducts = () => {
 
             <div className='grid  grid-cols-2 px-4 gap-4 lg:grid-cols-5 lg:gap-4 my-12 lg:px-6'>
                 {
-                    products.map(product => <Product product={product}>
+                    tenProducts.map(product => <Product product={product}>
 
                     </Product>)
                 }
